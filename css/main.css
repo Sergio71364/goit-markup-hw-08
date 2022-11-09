@@ -324,9 +324,8 @@ input {
   letter-spacing: 0.06em;
   text-align: center;
   outline: none;
-  padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 10px 24px;
+  margin: 0 auto;
   color: var(--color-primary-white);
   background-color: var(--color-accent);
   border: none;
@@ -336,6 +335,11 @@ input {
 }
 .button:hover {
   cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .button {
+    padding: 10px 32px;
+  }
 }
 
 body {
@@ -354,7 +358,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -476,6 +480,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .branches__text {
   position: absolute;
@@ -502,9 +507,7 @@ body {
 }
 .branches__item {
   position: relative;
-}
-.branches__item:not(:last-child) {
-  margin-right: 30px;
+  margin: 15px;
 }
 
 .clients {
@@ -939,31 +942,48 @@ body {
   text-align: center;
   background-color: var(--color-background-light);
   margin: 0 auto;
-  padding: 200px 0;
-  max-width: 1600px;
+  padding: 118px 0;
+}
+@media screen and (min-width: 576px) {
+  .hero {
+    padding: 200px 0;
+  }
 }
 .hero__title {
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.62;
   letter-spacing: 0.06em;
-  max-width: 690px;
+  width: 100%;
+  max-width: 360px;
   margin: 0 auto;
   text-transform: uppercase;
   text-align: center;
   color: var(--color-primary-white);
   margin-bottom: 30px;
 }
+@media screen and (min-width: 576px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.36;
+    max-width: 690px;
+  }
+}
 
 .hero-canvas {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
+  margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
+}
+@media screen and (min-width: 576px) {
+  .hero-canvas {
+    height: 600px;
+  }
 }
 
 .modal {
@@ -1078,15 +1098,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .projects__item {
-  width: calc((100% - 60px) / 3);
-}
-.projects__item:nth-child(-n+6) {
-  margin-bottom: 30px;
-}
-.projects__item:not(:nth-child(3n)) {
-  margin-right: 30px;
+  width: calc((100% - 90px) / 3);
+  margin: 15px;
 }
 .projects__link {
   display: block;
@@ -1151,15 +1167,14 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .team__card {
   border-radius: 0px 0px 4px 4px;
   background: var(--color-primary-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.team__card:not(:last-child) {
-  margin-right: 30px;
+  margin: 15px;
 }
 .team__details {
   padding: 30px 32px;
