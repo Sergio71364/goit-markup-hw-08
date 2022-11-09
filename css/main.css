@@ -358,10 +358,23 @@ body {
 }
 
 .container {
-  max-width: 480px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -403,8 +416,12 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 .section__title {
   font-size: 36px;
@@ -416,9 +433,6 @@ body {
 }
 .section--grey {
   background: var(--color-background-lighter);
-}
-.section--no-top-padding {
-  padding-top: 0;
 }
 
 .social {
@@ -475,12 +489,25 @@ body {
 }
 
 .branches {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .branches {
+    display: block;
+    padding-top: 0;
+  }
+}
+.branches__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -15px;
+}
+@media screen and (min-width: 1200px) {
+  .branches__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .branches__text {
   position: absolute;
@@ -508,6 +535,7 @@ body {
 .branches__item {
   position: relative;
   margin: 15px;
+  width: calc((100% - 90px) / 3);
 }
 
 .clients {
@@ -541,16 +569,37 @@ body {
 }
 
 .features {
+  margin: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .features {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .features__item {
-  width: calc((100% - 120px) / 4);
   margin: 15px;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: calc((100% - 120px) / 4);
+  }
 }
 .features__icon-wrapper {
   display: -webkit-box;
@@ -565,8 +614,8 @@ body {
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--color-background-lighter);
-  width: 270px;
   height: 120px;
+  width: 100%;
 }
 .features__title {
   font-size: 14px;
@@ -574,6 +623,12 @@ body {
   text-transform: uppercase;
   color: var(--color-text-title);
   margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: start;
+  }
 }
 .features__text {
   font-size: 14px;
@@ -944,7 +999,7 @@ body {
   margin: 0 auto;
   padding: 118px 0;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
   }
@@ -962,11 +1017,11 @@ body {
   color: var(--color-primary-white);
   margin-bottom: 30px;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
-    font-size: 26px;
+    font-size: 44px;
     line-height: 1.36;
-    max-width: 690px;
+    max-width: 696px;
   }
 }
 
@@ -980,7 +1035,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .hero-canvas {
     height: 600px;
   }
@@ -1171,10 +1226,24 @@ body {
 }
 .team__card {
   border-radius: 0px 0px 4px 4px;
+  outline: 1px dotted rgb(100, 85, 188);
   background: var(--color-primary-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 15px;
+}
+@media screen and (min-width: 768px) {
+  .team__card {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__card {
+    width: calc((100% - 120px) / 4);
+  }
+}
+.team__image {
+  width: 100%;
 }
 .team__details {
   padding: 30px 32px;

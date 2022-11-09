@@ -1,8 +1,16 @@
 .branches {
-  // padding-top: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    padding-top: 0;
+  }
+  &__list {
+    flex-wrap: wrap;
+    margin: -15px;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
   &__text {
     position: absolute;
     left: 0;
@@ -23,8 +31,6 @@
   &__item {
     position: relative;
     margin: 15px;
-    // &:not(:last-child) {
-    //   margin-right: 30px;
-    // }
+    width: calc((100% - 30px * 3) / 3);
   }
 }

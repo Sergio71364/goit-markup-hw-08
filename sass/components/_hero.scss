@@ -3,7 +3,7 @@
   background-color: var(--color-background-light);
   margin: 0 auto;
   padding: 118px 0;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $desktop) {
     padding: 200px 0;
   }
   &__title {
@@ -18,11 +18,10 @@
     text-align: center;
     color: var(--color-primary-white);
     margin-bottom: 30px;
-
-    @media screen and (min-width: 576px) {
-      font-size: 26px;
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
       line-height: 1.36;
-      max-width: 690px;
+      max-width: 696px;
     }
   }
 }
@@ -36,7 +35,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $desktop) {
     height: 600px;
   }
 }

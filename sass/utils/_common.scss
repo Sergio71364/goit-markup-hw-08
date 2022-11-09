@@ -14,10 +14,17 @@ body {
 }
 
 .container {
-  max-width: 480px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 .logo {
@@ -62,8 +69,10 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
   &__title {
     font-size: 36px;
     font-weight: 700;
@@ -74,9 +83,6 @@ body {
   }
   &--grey {
     background: var(--color-background-lighter);
-  }
-  &--no-top-padding {
-    padding-top: 0;
   }
 }
 
