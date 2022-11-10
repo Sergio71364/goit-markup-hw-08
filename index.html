@@ -14,9 +14,14 @@
     <title>Web Studio - Студія</title>
   </head>
   <body>
+    <!-- <div class="menu-container is-open" data-menu>
+          <div class="block1"></div>
+          <div class="block2"></div>
+          
+        </div> -->
     <header class="header">
       <div class="header__container container">
-        <div class="menu" data-menu>
+        <div class="menu-container is-open" data-menu>
           <nav class="site-nav">
             <a href="./index.html" class="logo">Web<span class="logo__suffix">Studio</span> </a>
             <ul class="site-nav__list list">
@@ -59,19 +64,18 @@
             <use href="./images/icons.svg#menu-close"></use>
           </svg>
         </div>
-        <div class="mobile-canvas" data-menu></div>
       </div>
     </header>
     <main>
       <!-- Секція Hero -->
-      <section class="hero hero-canvas">
+      <section class="hero hero-canvas visually-hidden">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Секція Features -->
-      <section class="section">
+      <section class="section visually-hidden">
         <div class="container">
           <h2 class="section__title visually-hidden">Наші особливості</h2>
           <ul class="features list">
@@ -123,7 +127,7 @@
         </div>
       </section>
       <!-- Секція Branches -->
-      <section class="section branches">
+      <section class="section branches visually-hidden">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="branches__list list">
@@ -161,7 +165,7 @@
         </div>
       </section>
       <!-- Секція Team -->
-      <section class="section section--grey">
+      <section class="section section--grey visually-hidden">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team list">

@@ -44,6 +44,9 @@ body {
   &--footer {
     margin-bottom: 20px;
   }
+  .is-open & {
+    display: none;
+  }
 }
 
 .icon {
