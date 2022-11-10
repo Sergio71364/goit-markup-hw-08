@@ -14,40 +14,52 @@
     <title>Web Studio - Студія</title>
   </head>
   <body>
-    <header class="header visually-hidden">
+    <header class="header">
       <div class="header__container container">
-        <nav class="site-nav">
-          <a href="./index.html" class="logo">Web<span class="logo__suffix">Studio</span> </a>
-          <ul class="site-nav__list list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--active">Студія </a>
+        <div class="menu" data-menu>
+          <nav class="site-nav">
+            <a href="./index.html" class="logo">Web<span class="logo__suffix">Studio</span> </a>
+            <ul class="site-nav__list list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link site-nav__link--active">Студія </a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо </a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакти </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts-nav list" data-menu>
+            <li class="contacts-nav__item">
+              <a href="mailto:info@devstudio.com" class="contacts-nav__link">
+                <svg class="icon header__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфоліо </a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакти </a>
+            <li class="contacts-nav__item">
+              <a href="tel:+380961111111" class="contacts-nav__link">
+                <svg class="icon header__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts-nav list">
-          <li class="contacts-nav__item">
-            <a href="mailto:info@devstudio.com" class="contacts-nav__link">
-              <svg class="icon header__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts-nav__item">
-            <a href="tel:+380961111111" class="contacts-nav__link">
-              <svg class="icon header__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
+
+        <div class="mobile" data-menu-button>
+          <svg class="menu-open-btn" height="40" width="40">
+            <use href="./images/icons.svg#menu-open"></use>
+          </svg>
+          <svg class="menu-close-btn" height="40" width="40">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </div>
+        <div class="mobile-canvas" data-menu></div>
       </div>
     </header>
     <main>
@@ -198,7 +210,7 @@
             </li>
             <li class="team__card">
               <img
-                class="image"
+                class="team__image image"
                 src="./images/repina-m.jpg"
                 width="270"
                 height="260"
@@ -241,7 +253,7 @@
             </li>
             <li class="team__card">
               <img
-                class="image"
+                class="team__image image"
                 src="./images/tarasov-m.jpg"
                 width="270"
                 height="260"
@@ -284,7 +296,7 @@
             </li>
             <li class="team__card">
               <img
-                class="image"
+                class="team__image image"
                 src="./images/ermakov-m.jpg"
                 width="270"
                 height="260"
@@ -520,5 +532,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
