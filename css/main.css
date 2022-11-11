@@ -436,12 +436,19 @@ body {
   }
 }
 .section__title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.16;
+  line-height: 1.18;
   text-align: center;
   color: var(--color-text-title);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 .section--grey {
   background: var(--color-background-lighter);
@@ -463,6 +470,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
 }
 .social-icons__link {
@@ -1161,28 +1171,28 @@ body {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile-2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
-  .hero-canvas {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-tablet-1x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-1x.jpg");
-  }
-}
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-canvas {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-tablet-2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-2x.jpg");
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero-canvas {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-desktop-1x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-tablet-1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-1x.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-canvas {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-desktop-2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-canvas {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-desktop-1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-1x.jpg");
   }
 }
 .modal {
@@ -1376,6 +1386,17 @@ body {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 15px;
 }
+@media screen and (max-width: 480px) {
+  .team__card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team__card {
+    width: calc(100% - 30px);
+  }
+}
 @media screen and (min-width: 768px) {
   .team__card {
     width: calc((100% - 60px) / 2);
@@ -1390,7 +1411,12 @@ body {
   width: 100%;
 }
 .team__details {
-  padding: 30px 32px;
+  padding: 30px 0 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__details {
+    padding: 30px 32px;
+  }
 }
 .team__name {
   font-size: 16px;
@@ -1402,4 +1428,10 @@ body {
 .team__description {
   text-align: center;
   margin-bottom: 16px;
+}
+
+.img-wrapper {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
