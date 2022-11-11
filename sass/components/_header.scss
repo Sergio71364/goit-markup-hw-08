@@ -4,6 +4,7 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__icon {
     margin-right: 10px;
@@ -13,9 +14,17 @@
 .site-nav {
   display: flex;
   align-items: center;
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    justify-content: space-between;
+  }
   &__list {
     display: flex;
     align-items: center;
+    margin-left: 90px;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
   }
   &__link {
     font-size: 14px;
@@ -62,8 +71,10 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left: auto;
 
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     justify-content: end;
@@ -92,9 +103,56 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 30px;
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
       margin-bottom: 10px;
     }
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.js-open-menu {
+  border: none;
+  background-color: transparent;
+  margin: 10px 0;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.js-close-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.js-menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: var(--color-primary-white);
+  color: antiquewhite;
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    font-size: 40px;
+    line-height: 1.18;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text-title);
+    text-decoration: none;
   }
 }

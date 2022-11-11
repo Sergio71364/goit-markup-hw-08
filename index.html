@@ -18,7 +18,11 @@
       <div class="header__container container">
         <nav class="site-nav">
           <a href="./index.html" class="logo">Web<span class="logo__suffix">Studio</span> </a>
-
+          <button class="mobile-menu-button js-open-menu">
+            <svg class="icon" width="40" height="40">
+              <use href="./images/icons.svg#menu-open"></use>
+            </svg>
+          </button>
           <ul class="site-nav__list list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link site-nav__link--active">Студія </a>
@@ -50,11 +54,41 @@
           </li>
         </ul>
       </div>
+      <nav class="js-menu-container is-open">
+        <ul class="js-menu-container__list list">
+          <li class="js-menu-container__item">
+            <a href="./index.html" class="js-menu-container__link js-menu-container__link--active"
+              >Студія
+            </a>
+          </li>
+          <li class="js-menu-container__item">
+            <a href="./portfolio.html" class="js-menu-container__link">Портфоліо </a>
+          </li>
+          <li class="js-menu-container__item">
+            <a href="" class="js-menu-container__link">Контакти </a>
+          </li>
+        </ul>
+        <ul class="js-menu-container__list list">
+          <li class="js-menu-container__item">
+            <a href="mailto:info@devstudio.com" class="js-menu-container__link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="js-menu-container__item">
+            <a href="tel:+380961111111" class="js-menu-container__link"> +38096 1111 111 </a>
+          </li>
+        </ul>
+        <button class="js-close-menu">
+          <svg class="icon" width="40" height="40">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+      </nav>
     </header>
 
     <main>
       <!-- Секція Hero -->
-      <section class="hero hero-canvas visually-hidden">
+      <section class="hero hero-canvas">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>Замовити послугу</button>
@@ -522,6 +556,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
