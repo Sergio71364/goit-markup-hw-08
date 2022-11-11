@@ -16,6 +16,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px dotted grey;
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
@@ -43,9 +44,6 @@ body {
   }
   &--footer {
     margin-bottom: 20px;
-  }
-  .is-open & {
-    display: none;
   }
 }
 
