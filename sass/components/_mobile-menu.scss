@@ -1,7 +1,8 @@
 .js-open-menu {
   border: none;
   background-color: transparent;
-  margin: 10px 0;
+  margin: 10px 0 10px auto;
+
   @media screen and (min-width: $tablet) {
     display: none;
   }

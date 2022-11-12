@@ -3,25 +3,26 @@
   gap: 30px;
   flex-wrap: wrap;
   &__link {
-    height: 92px;
-    width: calc((100vw - 2 * 30px) / 2);
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 92px;
+    width: calc((100vw - 2 * 30px) / 2);
     color: var(--color-background-grey);
     border: 1px solid var(--color-background-grey);
     border-radius: 4px;
     outline: none;
     transition: border-color var(--transition-cubic), color var(--transition-cubic);
-    @media screen and (min-width: $mobile) {
+    @include for-size(mobile) {
       width: 210px;
     }
-    @media screen and (min-width: $tablet) {
+    @include for-size(table) {
       width: 226px;
     }
-    @media screen and (min-width: $desktop) {
+    @include for-size(desktop) {
       width: 170px;
     }
+
     &:hover {
       color: var(--color-accent);
       border-color: var(--color-accent);

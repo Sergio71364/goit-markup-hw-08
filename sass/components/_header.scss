@@ -4,7 +4,7 @@
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
   }
   &__icon {
     margin-right: 10px;
@@ -14,16 +14,14 @@
 .site-nav {
   display: flex;
   align-items: center;
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-    justify-content: space-between;
-  }
+
+  justify-content: start;
   &__list {
-    display: flex;
-    align-items: center;
-    margin-left: 90px;
-    @media screen and (max-width: $tablet) {
-      display: none;
+    display: none;
+    @include for-size(tablet) {
+      display: flex;
+      align-items: center;
+      margin-left: 90px;
     }
   }
   &__link {
@@ -45,7 +43,7 @@
     &--active {
       color: var(--color-accent);
       position: relative;
-      @media screen and (min-width: $tablet) {
+      @include for-size(tablet) {
         &::after {
           content: '';
           bottom: -1px;
@@ -61,21 +59,21 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (min-width: $tablet) {
+    @include for-size(tablet) {
       margin-right: 50px;
     }
   }
 }
 
 .contacts-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-
-  @media screen and (max-width: $tablet) {
-    display: none;
+  display: none;
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: auto;
   }
-  @media screen and (min-width: $desktop) {
+  @include for-size(desktop) {
     flex-direction: row;
     justify-content: end;
     align-items: center;
@@ -92,7 +90,7 @@
     color: var(--color-text-primary);
     transition: color var(--transition-cubic);
 
-    @media screen and (min-width: $desktop) {
+    @include for-size(desktop) {
       padding-top: 32px;
       padding-bottom: 31px;
     }
@@ -103,12 +101,11 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @include for-size(tablet-only) {
       margin-bottom: 10px;
     }
-    @media screen and (min-width: $desktop) {
+    @include for-size(desktop) {
       margin-right: 30px;
     }
   }
 }
-
