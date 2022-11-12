@@ -6,6 +6,7 @@
   @include for-size(desktop) {
     padding: 200px 0;
   }
+
   &__title {
     font-size: 26px;
     font-weight: 900;
@@ -23,6 +24,9 @@
       line-height: 1.36;
       max-width: 696px;
     }
+    @media screen and (max-width: 300px) {
+      font-size: 13px;
+    }
   }
 }
 
@@ -35,6 +39,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   @include for-size(desktop) {
     height: 600px;
   }

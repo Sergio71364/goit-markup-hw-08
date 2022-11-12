@@ -2,8 +2,7 @@
   border: none;
   background-color: transparent;
   margin: 10px 0 10px auto;
-
-  @media screen and (min-width: $tablet) {
+  @include for-size(tablet) {
     display: none;
   }
 }
@@ -22,6 +21,9 @@
 
 .js-menu-container {
   display: none;
+  // display: flex;
+  // transform: translateX(-150%);
+  // overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +31,9 @@
   width: 100%;
   padding: 48px 40px;
   background-color: var(--color-primary-white);
+  transition: transform var(--transition-cubic);
   &.is-open {
+    // transform: translateX(0%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -337,9 +337,15 @@ input {
 .button:hover {
   cursor: pointer;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .button {
     padding: 10px 32px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .button {
+    font-size: 13px;
+    padding: 5px 5px;
   }
 }
 
@@ -371,7 +377,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   .container {
-    max-width: 480px;
+    max-width: 100vw;
+    width: 100%;
   }
 }
 @media screen and (min-width: 480px) {
@@ -1156,6 +1163,11 @@ body {
     max-width: 696px;
   }
 }
+@media screen and (max-width: 300px) {
+  .hero__title {
+    font-size: 13px;
+  }
+}
 
 .hero-canvas {
   max-width: 1600px;
@@ -1314,6 +1326,10 @@ body {
   width: 100%;
   padding: 48px 40px;
   background-color: var(--color-primary-white);
+  -webkit-transition: -webkit-transform var(--transition-cubic);
+  transition: -webkit-transform var(--transition-cubic);
+  transition: transform var(--transition-cubic);
+  transition: transform var(--transition-cubic), -webkit-transform var(--transition-cubic);
 }
 .js-menu-container.is-open {
   display: -webkit-box;
