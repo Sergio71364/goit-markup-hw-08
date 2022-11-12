@@ -463,6 +463,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-primary-white);
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -559,10 +560,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .clients__link {
   height: 92px;
-  width: 170px;
+  width: calc((100vw - 60px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,6 +581,21 @@ body {
   outline: none;
   -webkit-transition: border-color var(--transition-cubic), color var(--transition-cubic);
   transition: border-color var(--transition-cubic), color var(--transition-cubic);
+}
+@media screen and (min-width: 480px) {
+  .clients__link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover {
   color: var(--color-accent);
@@ -653,24 +671,63 @@ body {
 
 .footer {
   background-color: var(--color-background-dark);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 70px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -webkit-column-gap: 165px;
+       -moz-column-gap: 165px;
+            column-gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -webkit-column-gap: 70px;
+       -moz-column-gap: 70px;
+            column-gap: 70px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
+.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.address__item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;
+}
 .address__link {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
@@ -684,10 +741,6 @@ body {
 }
 .address__link:hover, .address__link:focus {
   color: var(--color-accent);
-}
-.address__item:not(:last-child) {
-  display: block;
-  margin-bottom: 9px;
 }
 
 .hero-form__title {
@@ -813,26 +866,37 @@ body {
   fill: var(--color-primary-white);
 }
 
-.signup-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+@media screen and (max-width: 1199.98px) {
+  .signup-form {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
 }
 .signup-form__title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--color-primary-white);
   margin-bottom: 20px;
 }
 .signup-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 15px;
+  margin: 0 auto 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -845,6 +909,12 @@ body {
   background-color: transparent;
   -webkit-transition: border-color var(--transition-cubic);
   transition: border-color var(--transition-cubic);
+}
+@media screen and (min-width: 1200px) {
+  .signup-form__input {
+    width: 358px;
+    margin: 0 12px 0 0;
+  }
 }
 .signup-form__input::-webkit-input-placeholder {
   font-size: 16px;
@@ -890,7 +960,7 @@ body {
   border-radius: 4px;
   border: none;
   padding: 10px 28px;
-  margin-left: 12px;
+  margin: 0 auto;
   color: var(--color-primary-white);
   display: -webkit-box;
   display: -ms-flexbox;
