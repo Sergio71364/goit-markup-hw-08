@@ -1,12 +1,15 @@
 .hero-form {
   &__title {
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-text-title);
     margin-bottom: 30px;
+    @include for-size(desktop) {
+      line-height: 1.15;
+    }
   }
   &__input {
     font-size: 12px;

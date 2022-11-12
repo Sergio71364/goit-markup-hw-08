@@ -1,15 +1,15 @@
 .branches {
   display: none;
-  @media screen and (min-width: $desktop) {
+
+  @include for-size(desktop) {
     display: block;
     padding-top: 0;
   }
+
   &__list {
+    display: flex;
     flex-wrap: wrap;
     margin: -15px;
-    @media screen and (min-width: $desktop) {
-      display: flex;
-    }
   }
   &__text {
     position: absolute;
