@@ -22,6 +22,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include for-size(desktop) {
+    align-items: start;
+  }
   &__item:not(:last-child) {
     display: block;
     margin-bottom: 9px;
@@ -35,6 +38,9 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
     transition: color var(--transition-cubic);
+    @include for-size(desktop) {
+      text-align: left;
+    }
     &--light {
       color: var(--color-primary-white);
     }

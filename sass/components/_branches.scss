@@ -1,11 +1,9 @@
 .branches {
   display: none;
-
   @include for-size(desktop) {
     display: block;
     padding-top: 0;
   }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
