@@ -1548,8 +1548,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--color-primary-white);
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: -webkit-transform var(--transition-cubic);
   transition: -webkit-transform var(--transition-cubic);
   transition: transform var(--transition-cubic);
