@@ -20,10 +20,11 @@
 }
 
 .js-menu-container {
-  display: none;
-  // display: flex;
-  // transform: translateX(-150%);
-  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-150%);
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -32,12 +33,14 @@
   padding: 48px 40px;
   background-color: var(--color-primary-white);
   transition: transform var(--transition-cubic);
+  z-index: 1;
   &.is-open {
-    // transform: translateX(0%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transform: translateX(0%);
   }
+}
+
+.site-nav-mobile {
+  margin-bottom: auto;
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -48,26 +51,20 @@
     letter-spacing: 0.02em;
     color: var(--color-text-title);
     text-decoration: none;
-    &--active {
+    &--active,
+    &:hover,
+    &:focus {
       color: var(--color-accent);
     }
     &[href*='mail'] {
       color: var(--color-accent);
     }
   }
-  &__list {
-    display: flex;
-  }
 }
 
-.mobile-menu-list {
-  margin-bottom: auto;
-}
-
-.social-list {
+.social-list-mobile {
   display: flex;
   margin-top: 64px;
-
   &__item:not(:last-child) {
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -85,8 +82,23 @@
   }
 }
 
-.disable-scroll {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
+.contacts-nav-mobile {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    font-size: 34px;
+    line-height: 1.17;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--color-accent);
+    &[href*='tel'] {
+      font-size: 24px;
+      line-height: 1.17;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--color-text-primary);
+    }
+  }
 }

@@ -1,26 +1,38 @@
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 15px 8px;
+
+  margin-bottom: 40px;
+  @include for-size(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
   &__button {
-    font-weight: 500;
+    font-size: 16px;
     line-height: 1.63;
+    font-weight: 500;
+    letter-spacing: 0.03em;
     text-align: center;
     color: var(--color-text-title);
     background-color: var(--color-background-lighter);
+    border: none;
+    border-radius: 4px;
     padding: 6px 22px;
     transition: color var(--transition-cubic), background-color var(--transition-cubic),
       box-shadow var(--transition-cubic);
     &:hover,
     &:focus {
       color: var(--color-primary-white);
+      padding: 6px 25px;
       background-color: var(--color-accent);
       box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
     }
-  }
-  &__item:not(:last-child) {
-    margin-right: 8px;
   }
 }
 
@@ -29,8 +41,14 @@
   flex-wrap: wrap;
   margin: -15px;
   &__item {
-    width: calc((100% - 3 * 30px) / 3);
+    width: 100%;
     margin: 15px;
+    @include for-size(tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+    }
+    @include for-size(desktop) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
   }
   &__link {
     display: block;
@@ -68,7 +86,11 @@
   &__details {
     border: 1px solid #eeeeee;
     border-top: none;
+    min-height: 110px;
     padding: 20px 24px 19px;
+    @include for-size(tablet-only) {
+      min-height: 146px;
+    }
   }
   &__name {
     font-size: 18px;
