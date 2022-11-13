@@ -2,6 +2,7 @@
   border: none;
   background-color: transparent;
   margin: 10px 0 10px auto;
+  cursor: pointer;
   @include for-size(tablet) {
     display: none;
   }
@@ -13,9 +14,11 @@
   right: 15px;
   border: none;
   background-color: transparent;
+  transition: color var(--transition-cubic);
   &:hover,
   &:focus {
     color: var(--color-accent);
+    cursor: pointer;
   }
 }
 
@@ -52,6 +55,7 @@
     letter-spacing: 0.02em;
     color: var(--color-text-title);
     text-decoration: none;
+    transition: color var(--transition-cubic);
     &--active,
     &:hover,
     &:focus {
@@ -93,13 +97,14 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: var(--color-accent);
+    color: var(--color-text-primary);
+    transition: color var(--transition-cubic);
     &[href*='tel'] {
       font-size: 24px;
-      line-height: 1.17;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--color-text-primary);
+    }
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
     }
   }
 }
