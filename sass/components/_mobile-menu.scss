@@ -23,7 +23,8 @@
 }
 
 .js-menu-container {
-  display: none;
+  // display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-150%);
@@ -38,7 +39,6 @@
   transition: transform var(--transition-cubic);
   z-index: 1;
   &.is-open {
-    display: flex;
     transform: translateX(0%);
   }
 }
