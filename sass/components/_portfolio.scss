@@ -42,7 +42,7 @@
   flex-wrap: wrap;
   margin: -15px;
   &__item {
-    width: 100%;
+    display: flex;
     margin: 15px;
     @include for-size(tablet) {
       width: calc((100% - 2 * 30px) / 2);
@@ -52,7 +52,8 @@
     }
   }
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     transition: box-shadow var(--transition-cubic);
     &:hover,
@@ -88,10 +89,8 @@
     border: 1px solid #eeeeee;
     border-top: none;
     min-height: 110px;
+    flex: 1 0 auto;
     padding: 20px 24px 19px;
-    @include for-size(tablet-only) {
-      min-height: 146px;
-    }
   }
   &__name {
     font-size: 18px;
