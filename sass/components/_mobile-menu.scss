@@ -56,6 +56,9 @@
     color: var(--color-text-title);
     text-decoration: none;
     transition: color var(--transition-cubic);
+    @media screen and (max-width: 370px) {
+      font-size: 30px;
+    }
     &--active,
     &:hover,
     &:focus {
@@ -84,6 +87,9 @@
     letter-spacing: 0.02em;
     color: var(--color-accent);
     text-decoration: none;
+    @media screen and (max-width: 370px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -101,6 +107,12 @@
     transition: color var(--transition-cubic);
     &[href*='tel'] {
       font-size: 24px;
+      @media screen and (max-width: 370px) {
+        font-size: 18px;
+      }
+    }
+    @media screen and (max-width: 370px) {
+      font-size: 22px;
     }
     &:hover,
     &:focus {
