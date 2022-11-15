@@ -55,10 +55,12 @@
     letter-spacing: 0.02em;
     color: var(--color-text-title);
     text-decoration: none;
+
     transition: color var(--transition-cubic);
-    @media screen and (max-width: 370px) {
+    @include for-size(micro-mobile-only) {
       font-size: 30px;
     }
+
     &--active,
     &:hover,
     &:focus {
@@ -73,12 +75,21 @@
 .social-list-mobile {
   display: flex;
   margin-top: 64px;
+  @include for-size(micro-mobile-only) {
+    flex-direction: column;
+  }
+  &__item {
+    @include for-size(micro-mobile-only) {
+      padding-top: 10px;
+    }
+  }
   &__item:not(:last-child) {
     padding-right: 10px;
+    margin-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
-  &__item:not(:first-child) {
-    padding-left: 10px;
+    @include for-size(micro-mobile-only) {
+      border: none;
+    }
   }
   &__link {
     font-weight: 500;
@@ -87,8 +98,8 @@
     letter-spacing: 0.02em;
     color: var(--color-accent);
     text-decoration: none;
-    @media screen and (max-width: 370px) {
-      font-size: 14px;
+    @include for-size(micro-mobile-only) {
+      line-height: 1.6;
     }
   }
 }
@@ -103,16 +114,17 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
+
     color: var(--color-text-primary);
     transition: color var(--transition-cubic);
     &[href*='tel'] {
       font-size: 24px;
-      @media screen and (max-width: 370px) {
-        font-size: 18px;
+      @include for-size(micro-mobile-only) {
+        font-size: 16px;
       }
     }
-    @media screen and (max-width: 370px) {
-      font-size: 22px;
+    @include for-size(micro-mobile-only) {
+      font-size: 18px;
     }
     &:hover,
     &:focus {

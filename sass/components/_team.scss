@@ -4,24 +4,22 @@
   margin: -15px;
   &__card {
     border-radius: 0px 0px 4px 4px;
-    background: var(--color-primary-white);
+    background-color: var(--color-primary-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     margin: 15px;
     max-width: 100%;
     @include for-size(mobile) {
-      width: 450px;
+      width: calc($mobile - 30px);
     }
     @include for-size(tablet) {
-      width: 354px;
+      width: calc(($tablet - 2 * 30px) / 2);
     }
     @include for-size(desktop) {
-      width: 270px;
+      width: calc(($desktop - 4 * 30px) / 4);
     }
   }
-  &__image {
-    width: 100%;
-  }
+
   &__details {
     padding: 30px 0 24px;
     @media screen and (min-width: $desktop) {
