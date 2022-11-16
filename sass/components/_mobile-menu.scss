@@ -23,7 +23,6 @@
 }
 
 .js-menu-container {
-  // display: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,6 +37,9 @@
   background-color: var(--color-primary-white);
   transition: transform var(--transition-cubic);
   z-index: 1;
+  @include for-size(micro-mobile-only) {
+    padding: 48px 15px;
+  }
   &.is-open {
     transform: translateX(0%);
   }
@@ -58,7 +60,7 @@
 
     transition: color var(--transition-cubic);
     @include for-size(micro-mobile-only) {
-      font-size: 30px;
+      // font-size: 30px;
     }
 
     &--active,
@@ -76,11 +78,11 @@
   display: flex;
   margin-top: 64px;
   @include for-size(micro-mobile-only) {
-    flex-direction: column;
+    // flex-direction: column;
   }
   &__item {
     @include for-size(micro-mobile-only) {
-      padding-top: 10px;
+      // padding-top: 10px;
     }
   }
   &__item:not(:last-child) {
@@ -99,7 +101,8 @@
     color: var(--color-accent);
     text-decoration: none;
     @include for-size(micro-mobile-only) {
-      line-height: 1.6;
+      font-size: 14px;
+      // line-height: 1.6;
     }
   }
 }
@@ -120,11 +123,11 @@
     &[href*='tel'] {
       font-size: 24px;
       @include for-size(micro-mobile-only) {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
     @include for-size(micro-mobile-only) {
-      font-size: 18px;
+      font-size: 26px;
     }
     &:hover,
     &:focus {

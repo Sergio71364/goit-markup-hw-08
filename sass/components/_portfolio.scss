@@ -75,17 +75,20 @@
   }
   &__overlay {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 99;
     top: 0;
     left: 0;
     min-height: 100%;
     height: auto;
     width: 100%;
-    padding: 77px 24px;
+    padding: 0 24px;
+
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
-    text-overflow: ellipsis;
     color: var(--color-primary-white);
     background: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
@@ -96,10 +99,6 @@
     }
     @include for-size(micro-mobile-only) {
       font-size: 16px;
-      padding: 10px 12px;
-    }
-    @include for-size(tablet) {
-      padding: 63px 24px;
     }
   }
 
