@@ -27,7 +27,8 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-150%);
-  overflow: hidden;
+  // overflow: hidden;
+  overflow-y: auto;
   position: fixed;
   top: 0;
   left: 0;

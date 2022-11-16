@@ -1197,7 +1197,6 @@ body {
 }
 
 .hero {
-  text-align: center;
   background-color: var(--color-background-light);
   margin: 0 auto;
   padding: 118px 0;
@@ -1281,6 +1280,7 @@ body {
 }
 .modal {
   position: relative;
+  overflow-y: auto;
   width: 95%;
   height: 95%;
   max-width: 450px;
@@ -1406,7 +1406,7 @@ body {
           justify-content: space-between;
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
-  overflow: hidden;
+  overflow-y: auto;
   position: fixed;
   top: 0;
   left: 0;
