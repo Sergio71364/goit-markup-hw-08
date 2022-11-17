@@ -48,13 +48,18 @@
             </a>
           </li>
         </ul>
-        <button class="js-open-menu">
+        <button
+          class="js-open-menu"
+          aria-label="mobile menu"
+          area-controls="mobile-menu"
+          area-expanded="false"
+        >
           <svg class="icon" width="40" height="40">
             <use href="./images/icons.svg#menu-open"></use>
           </svg>
         </button>
       </div>
-      <nav class="js-menu-container">
+      <nav class="js-menu-container" id="mobile-menu">
         <ul class="site-nav-mobile list">
           <li class="site-nav-mobile__item">
             <a href="./index.html" class="site-nav-mobile__link site-nav-mobile__link--active"
